@@ -1,9 +1,12 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import nltk
 from thai import Thai
 
 class NLParser:
 
-    CFG = Thai.context_free_grammar
+    CFG = nltk.CFG.fromstring(Thai.CONTEXT_FREE_GRAMMAR)
 
     def convertToTree(self, sentence):
         rd_parser = nltk.RecursiveDescentParser(self.CFG)

@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 from nl_parser import NLParser
 
 class Chatbot:
@@ -19,7 +22,6 @@ class Chatbot:
         user_input = input("You >> ")
         while user_input != "thank":
             self.natural_lang_parser.convertToTree(sentence = user_input)
-            
             user_input = input("You >> ")
 
             
